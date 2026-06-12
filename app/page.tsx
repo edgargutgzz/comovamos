@@ -219,6 +219,7 @@ export default function Home() {
   const [dimension, setDimension] = useState<DimensionLabel>("Seguridad");
   const [selected, setSelected] = useState<IndicatorLabel>("Percepción de inseguridad");
   const [municipios, setMunicipios] = useState<string[]>(["AMM"]);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const ind = getIndicator(selected);
   const dataLabel = getDataLabel(selected);
@@ -283,38 +284,70 @@ export default function Home() {
       </aside>
 
       {/* Mobile header */}
-      <header className="lg:hidden bg-white" style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
-        <div className="flex items-center gap-4 px-4 py-3">
+      <header className="lg:hidden bg-white flex items-center justify-between px-4 py-3" style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
+        <div className="flex items-center gap-3">
           <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-10 w-auto" />
           <div>
             <p className="text-sm font-bold" style={{ color: "#161616" }}>Encuesta Así Vamos</p>
             <p className="text-xs" style={{ color: "#9a9a9a" }}>2023–2025</p>
           </div>
         </div>
-        {/* Dimension tabs horizontal scroll */}
-        <div className="flex overflow-x-auto px-4" style={{ scrollbarWidth: "none", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-          {ALL_DIMENSIONS.map((dim) => {
-            const isActive = dim.label === dimension;
-            const isEnabled = dim.enabled;
-            return (
-              <button
-                key={dim.label}
-                disabled={!isEnabled}
-                onClick={() => isEnabled && handleDimensionClick(dim.label as DimensionLabel)}
-                className="px-4 py-3 text-sm font-medium whitespace-nowrap flex-shrink-0 transition-all"
-                style={{
-                  color: isActive ? dim.color : isEnabled ? "#161616" : "#bebebe",
-                  borderBottom: isActive ? `2.5px solid ${dim.color}` : "2.5px solid transparent",
-                  background: "transparent",
-                  cursor: isEnabled ? "pointer" : "not-allowed",
-                }}
-              >
-                {dim.label}
-              </button>
-            );
-          })}
-        </div>
+        <button onClick={() => setDrawerOpen(true)} className="cursor-pointer p-2 rounded-lg" style={{ color: "#161616" }}>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+          </svg>
+        </button>
       </header>
+
+      {/* Mobile drawer overlay */}
+      {drawerOpen && (
+        <div className="lg:hidden fixed inset-0 z-50 flex">
+          {/* Backdrop */}
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.4)" }} onClick={() => setDrawerOpen(false)} />
+          {/* Drawer */}
+          <div className="relative w-72 bg-white flex flex-col h-full" style={{ boxShadow: "4px 0 24px rgba(0,0,0,0.12)" }}>
+            {/* Header */}
+            <div className="flex items-center justify-between px-5 py-5" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+              <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-10 w-auto" />
+              <button onClick={() => setDrawerOpen(false)} className="cursor-pointer p-1" style={{ color: "#9a9a9a" }}>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                </svg>
+              </button>
+            </div>
+            {/* Title */}
+            <div className="px-5 py-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+              <p className="text-sm font-bold" style={{ color: "#161616" }}>Encuesta Así Vamos</p>
+              <p className="text-xs mt-0.5" style={{ color: "#9a9a9a" }}>2023–2025</p>
+            </div>
+            {/* Dimensions */}
+            <nav className="flex-1 py-3">
+              <p className="px-5 pb-2 text-xs font-semibold uppercase tracking-widest" style={{ color: "#bebebe" }}>Dimensiones</p>
+              {ALL_DIMENSIONS.map((dim) => {
+                const isActive = dim.label === dimension;
+                const isEnabled = dim.enabled;
+                return (
+                  <button
+                    key={dim.label}
+                    disabled={!isEnabled}
+                    onClick={() => { if (isEnabled) { handleDimensionClick(dim.label as DimensionLabel); setDrawerOpen(false); } }}
+                    className="w-full text-left px-5 py-3 text-sm transition-all flex items-center"
+                    style={{
+                      color: isActive ? dim.color : isEnabled ? "#161616" : "#bebebe",
+                      cursor: isEnabled ? "pointer" : "not-allowed",
+                      backgroundColor: isActive ? dim.color + "12" : "transparent",
+                      borderLeft: isActive ? `3px solid ${dim.color}` : "3px solid transparent",
+                      fontWeight: isActive ? 600 : 400,
+                    }}
+                  >
+                    {dim.label}
+                  </button>
+                );
+              })}
+            </nav>
+          </div>
+        </div>
+      )}
 
       {/* Main content */}
       <div className="flex-1 flex flex-col min-w-0">
