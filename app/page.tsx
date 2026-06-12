@@ -215,7 +215,7 @@ function MunicipioSelect({ values, onChange }: { values: string[]; onChange: (v:
 export default function Home() {
   const [dimension, setDimension] = useState<DimensionLabel>("Seguridad");
   const [selected, setSelected] = useState<IndicatorLabel>("Percepción de inseguridad");
-  const [municipios, setMunicipios] = useState<string[]>(["AMM", "García", "San Pedro"]);
+  const [municipios, setMunicipios] = useState<string[]>(["AMM", "García", "Monterrey"]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showHero, setShowHero] = useState(true);
 
