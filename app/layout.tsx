@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Encuesta Así Vamos — Cómo Vamos Nuevo León",
   description:
     "Explorador interactivo de la Encuesta Así Vamos — percepción ciudadana en el AMM 2023–2025",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

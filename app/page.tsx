@@ -328,7 +328,7 @@ export default function Home() {
         <div className="flex items-center gap-3">
           <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-10 w-auto cursor-pointer" onClick={() => setShowHero(true)} />
           <div>
-            <p className="text-sm font-bold" style={{ color: "#161616" }}>Encuesta Así Vamos</p>
+            <p className="text-sm font-bold whitespace-nowrap" style={{ color: "#161616" }}>Encuesta Así Vamos</p>
             <p className="text-xs" style={{ color: "#9a9a9a" }}>2023–2025</p>
           </div>
         </div>
