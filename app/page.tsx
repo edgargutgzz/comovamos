@@ -292,7 +292,7 @@ export default function Home() {
             const isActive = dim.label === dimension;
             const isEnabled = dim.enabled;
             return (
-              <div key={dim.label} className="group flex flex-col">
+              <div key={dim.label}>
                 <button
                   onClick={() => isEnabled && handleDimensionClick(dim.label as DimensionLabel)}
                   className="w-full text-left px-5 py-2.5 text-sm transition-all flex items-center gap-3"
@@ -309,11 +309,6 @@ export default function Home() {
                   <dim.Icon size={17} className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }} />
                   {dim.label}
                 </button>
-                {!isEnabled && (
-                  <span className="hidden group-hover:block text-xs px-5 pb-2" style={{ color: "#b2b2b2" }}>
-                    <span className="px-2 py-0.5 rounded-md" style={{ backgroundColor: "#f4ece0" }}>próximamente</span>
-                  </span>
-                )}
               </div>
             );
           })}
