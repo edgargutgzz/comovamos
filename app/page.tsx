@@ -238,8 +238,9 @@ export default function Home() {
     <div className="min-h-screen flex flex-col items-center justify-center font-sans px-10 lg:px-6" style={{ backgroundColor: "#fcefe4" }}>
       <div className="max-w-lg w-full text-center">
         <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-20 w-auto mx-auto mb-8" />
-        <h1 className="text-4xl font-bold tracking-tight mb-4 whitespace-nowrap" style={{ color: "#161616" }}>
-          Encuesta Así Vamos
+        <h1 className="text-4xl font-bold tracking-tight mb-4" style={{ color: "#161616" }}>
+          <span className="block lg:inline">Encuesta</span>
+          <span className="block lg:inline"> Así Vamos</span>
         </h1>
         <p className="text-lg mb-3" style={{ color: "#9a9a9a" }}>
           Explora cómo perciben los ciudadanos del AMM su ciudad: seguridad, medio ambiente y más.
@@ -291,7 +292,7 @@ export default function Home() {
             const isActive = dim.label === dimension;
             const isEnabled = dim.enabled;
             return (
-              <div key={dim.label}>
+              <div key={dim.label} className="group">
                 <button
                   onClick={() => isEnabled && handleDimensionClick(dim.label as DimensionLabel)}
                   className="w-full text-left px-5 py-2.5 text-sm transition-all flex items-center gap-3"
@@ -307,6 +308,11 @@ export default function Home() {
                 >
                   <dim.Icon size={17} className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }} />
                   {dim.label}
+                  {!isEnabled && (
+                    <span className="ml-auto text-xs hidden group-hover:inline px-2 py-0.5 rounded-md" style={{ backgroundColor: "#f4ece0", color: "#b2b2b2" }}>
+                      próximamente
+                    </span>
+                  )}
                 </button>
               </div>
             );
