@@ -45,19 +45,18 @@ const CustomTooltip = ({
     <div className="bg-white rounded-xl px-4 py-3 text-sm" style={{ border: "1px solid rgba(0,0,0,0.1)", boxShadow: "0 4px 16px rgba(0,0,0,0.08)", minWidth: "200px" }}>
       <p className="font-semibold mb-3" style={{ color: "#9a9a9a" }}>{label}</p>
       {Object.entries(byMun).map(([mun, cats]) => (
-        <div key={mun} className="mb-3">
+        <div key={mun} className="mb-2">
           <p className="text-xs font-semibold mb-1" style={{ color: "#161616" }}>{mun === "AMM" ? "Área Metropolitana" : mun}</p>
-          {(["Contaminado", "Neutral", "Limpio"] as const).map((cat) => (
-            cats[cat] !== undefined ? (
-              <div key={cat} className="flex items-center justify-between gap-4 mb-0.5">
-                <div className="flex items-center gap-2">
+          <div className="flex gap-3">
+            {(["Contaminado", "Neutral", "Limpio"] as const).map((cat) =>
+              cats[cat] !== undefined ? (
+                <div key={cat} className="flex items-center gap-1">
                   <span className="w-2 h-2 rounded-sm flex-shrink-0" style={{ backgroundColor: CATEGORY_COLORS[cat] }} />
-                  <span style={{ color: "#9a9a9a" }}>{cat}</span>
+                  <span className="font-semibold text-xs" style={{ color: CATEGORY_COLORS[cat] }}>{cats[cat]}%</span>
                 </div>
-                <span className="font-bold" style={{ color: CATEGORY_COLORS[cat] }}>{cats[cat]}%</span>
-              </div>
-            ) : null
-          ))}
+              ) : null
+            )}
+          </div>
         </div>
       ))}
     </div>
