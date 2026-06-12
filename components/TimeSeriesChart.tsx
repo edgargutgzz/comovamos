@@ -63,6 +63,15 @@ const CustomTooltip = ({
 };
 
 export default function TimeSeriesChart({ data, municipios, lineColor }: Props) {
+  // Dynamic Y domain with padding
+  const allValues = data.flatMap((d) =>
+    municipios.map((m) => d[m]).filter((v) => v !== undefined && !isNaN(v as number)) as number[]
+  );
+  const minVal = allValues.length ? Math.min(...allValues) : 0;
+  const maxVal = allValues.length ? Math.max(...allValues) : 100;
+  const yMin = 0;
+  const yMax = allValues.length ? Math.min(100, Math.ceil((maxVal + 10) / 10) * 10) : 100;
+
   return (
     <ResponsiveContainer width="100%" height={480}>
       <LineChart data={data} margin={{ top: 8, right: 24, left: 0, bottom: 16 }}>
@@ -74,7 +83,7 @@ export default function TimeSeriesChart({ data, municipios, lineColor }: Props) 
           axisLine={{ stroke: "#e8e8e8" }}
         />
         <YAxis
-          domain={[0, 100]}
+          domain={[yMin, yMax]}
           tick={{ fontSize: 12, fill: "#9a9a9a", fontFamily: "var(--font-rubik, sans-serif)" }}
           tickLine={false}
           axisLine={false}
@@ -96,7 +105,7 @@ export default function TimeSeriesChart({ data, municipios, lineColor }: Props) 
             dataKey={mun}
             stroke={lineColor ?? MUNICIPIO_COLORS[mun] ?? "#7e33c3"}
             strokeWidth={2.5}
-            dot={{ r: 5, strokeWidth: 0, fill: lineColor ?? MUNICIPIO_COLORS[mun] ?? "#7e33c3" }}
+            dot={{ r: 4, strokeWidth: 0, fill: lineColor ?? MUNICIPIO_COLORS[mun] ?? "#7e33c3" }}
             activeDot={{ r: 7, strokeWidth: 0 }}
           />
         ))}

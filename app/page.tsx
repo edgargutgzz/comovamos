@@ -33,35 +33,25 @@ const MUNICIPIOS = [
 const PARTIAL_DATA = new Set(["San Nicolás", "San Pedro"]);
 
 const ALL_DIMENSIONS = [
-  { label: "Seguridad",         enabled: true,  color: "#fc6656" },
-  { label: "Medio Ambiente",    enabled: false, color: "#29c19b" },
-  { label: "Movilidad",         enabled: false, color: "#7e33c3" },
-  { label: "Economía",          enabled: false, color: "#ffba00" },
-  { label: "Salud",             enabled: false, color: "#fb7e50" },
-  { label: "Educación",         enabled: false, color: "#7e33c3" },
-  { label: "Desarrollo Urbano", enabled: false, color: "#ffba00" },
-  { label: "Gobierno",          enabled: false, color: "#fc6656" },
+  { label: "Seguridad",         enabled: true,  color: "#fc6656", icon: "M12 3l7 4v5c0 5-7 9-7 9S5 17 5 12V7l7-4z" },
+  { label: "Medio Ambiente",    enabled: false, color: "#29c19b", icon: "M12 21V12m0 0C12 7 8 4 4 5c0 5 3 9 8 9m0-9c0-5 4-8 8-7-1 5-4 9-8 9" },
+  { label: "Movilidad",         enabled: false, color: "#7e33c3", icon: "M5 17H3V7l3-4h10l3 4v10h-2m-9 0a2 2 0 104 0m-4 0a2 2 0 014 0M3 11h18" },
+  { label: "Economía",          enabled: false, color: "#ffba00", icon: "M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" },
+  { label: "Salud",             enabled: false, color: "#fb7e50", icon: "M12 21C12 21 4 13.5 4 8.5A4.5 4.5 0 0112 5a4.5 4.5 0 018 3.5C20 13.5 12 21 12 21z" },
+  { label: "Educación",         enabled: false, color: "#7e33c3", icon: "M12 3L2 8l10 5 10-5-10-5zM2 13l10 5 10-5M2 18l10 5 10-5" },
+  { label: "Desarrollo Urbano", enabled: false, color: "#ffba00", icon: "M3 21h18M9 21V9l3-6 3 6v12M3 21V11l6-4M21 21V11l-6-4" },
+  { label: "Gobierno",          enabled: false, color: "#fc6656", icon: "M3 21h18M3 10h18M5 10V6l7-3 7 3v4M9 21v-6h6v6" },
 ] as const;
 
 type DimensionLabel = "Seguridad" | "Medio Ambiente";
 
 const INDICATORS = [
+  { label: "Confianza en policía",          dimension: "Seguridad"      as DimensionLabel, color: "#fc6656", dataLabel: "Confianza en policía municipal", question: "¿Confía en la policía de su colonia?",                                     enabled: true  },
   { label: "Percepción de inseguridad",     dimension: "Seguridad"      as DimensionLabel, color: "#fc6656", dataLabel: "Percepción de inseguridad",    question: "¿Qué tan seguro(a) se siente en su municipio?",                            enabled: true  },
-  { label: "Confianza en policía",          dimension: "Seguridad"      as DimensionLabel, color: "#fc6656", dataLabel: "Confianza en policía municipal", question: "¿Confía en la policía de su colonia?",                                     enabled: false },
   { label: "Satisfacción con áreas verdes", dimension: "Medio Ambiente" as DimensionLabel, color: "#29c19b", dataLabel: "Satisfacción con áreas verdes",   question: "¿Los parques y jardines de su municipio están limpios y tienen buena imagen?", enabled: true  },
   { label: "Calidad del aire",              dimension: "Medio Ambiente" as DimensionLabel, color: "#29c19b", dataLabel: "Calidad del aire percibida",       question: "¿Qué tan limpio o contaminado estuvo el aire en su municipio?",            enabled: true  },
 ] as const;
 
-const INDICATOR_DESCRIPTIONS: Record<string, string> = {
-  "Percepción de inseguridad":
-    "Porcentaje de ciudadanos que se sienten 'inseguros' o 'muy inseguros' en su municipio.",
-  "Confianza en policía municipal":
-    "Porcentaje de ciudadanos que confían en la policía de su colonia.",
-  "Satisfacción con áreas verdes":
-    "Porcentaje de ciudadanos que consideran que los parques y jardines de su municipio están limpios y tienen buena imagen.",
-  "Calidad del aire percibida":
-    "Porcentaje de ciudadanos que calificaron el aire de su municipio como 'limpio' o 'muy limpio' durante los últimos 12 meses.",
-};
 
 type IndicatorLabel = (typeof INDICATORS)[number]["label"];
 
@@ -78,7 +68,7 @@ function getQuestion(label: IndicatorLabel): string {
 }
 
 const FIRST_BY_DIMENSION: Record<DimensionLabel, IndicatorLabel> = {
-  Seguridad:        "Percepción de inseguridad",
+  Seguridad:        "Confianza en policía",
   "Medio Ambiente": "Satisfacción con áreas verdes",
 };
 
@@ -217,7 +207,7 @@ function MunicipioSelect({ values, onChange }: { values: string[]; onChange: (v:
 
 export default function Home() {
   const [dimension, setDimension] = useState<DimensionLabel>("Seguridad");
-  const [selected, setSelected] = useState<IndicatorLabel>("Percepción de inseguridad");
+  const [selected, setSelected] = useState<IndicatorLabel>("Confianza en policía");
   const [municipios, setMunicipios] = useState<string[]>(["AMM"]);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -275,6 +265,9 @@ export default function Home() {
                   fontWeight: isActive ? 600 : 400,
                 }}
               >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }}>
+                  <path d={(dim as { icon: string }).icon} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
                 {dim.label}
               </button>
             );
@@ -334,7 +327,10 @@ export default function Home() {
                       fontWeight: isActive ? 600 : 400,
                     }}
                   >
-                    {dim.label}
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }}>
+                  <path d={(dim as { icon: string }).icon} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                {dim.label}
                   </button>
                 );
               })}
@@ -379,19 +375,16 @@ export default function Home() {
           <section className="bg-white rounded-2xl p-6 shadow-sm" style={{ border: "1px solid rgba(0,0,0,0.08)" }}>
 
             {/* Municipio selector + subtitle */}
-            <div className="flex flex-col lg:flex-row lg:items-start gap-3 mb-5">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-3 mb-8">
               <div className="flex-1">
-                <div className="flex items-center gap-2">
-                  <p className="text-base font-semibold" style={{ color: "#161616" }}>{getQuestion(selected)}</p>
-                  <div className="relative group">
-                    <span className="text-xs font-bold rounded-full flex items-center justify-center cursor-pointer" style={{ width: 16, height: 16, backgroundColor: "#e8e8e8", color: "#9a9a9a" }}>i</span>
-                    <div className="absolute left-0 top-6 z-50 hidden group-hover:block w-72 rounded-xl p-4 text-xs leading-relaxed"
-                      style={{ backgroundColor: "#161616", color: "#fff", boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
-                      {INDICATOR_DESCRIPTIONS[dataLabel]}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm mt-0.5" style={{ color: "#9a9a9a" }}>2023–2025</p>
+                <p className="text-base font-semibold" style={{ color: "#161616" }}>{getQuestion(selected)}</p>
+                <p className="text-sm mt-0.5" style={{ color: "#9a9a9a" }}>
+                  {selected === "Percepción de inseguridad" && "% que se siente inseguro o muy inseguro"}
+                  {selected === "Confianza en policía" && "% que confía en la policía de su colonia"}
+                  {selected === "Satisfacción con áreas verdes" && "% que considera los parques limpios y con buena imagen"}
+                  {selected === "Calidad del aire" && "% que califica el aire como limpio o muy limpio"}
+                  {" · 2023–2025"}
+                </p>
               </div>
               <div className="w-full lg:w-1/2">
                 <MunicipioSelect values={municipios} onChange={setMunicipios} />
