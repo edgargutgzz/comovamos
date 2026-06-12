@@ -1,10 +1,15 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
+import { ShieldCheck, Leaf, Bus, TrendingUp, Heart, BookOpen, Building2, Landmark } from "lucide-react";
 import dynamic from "next/dynamic";
 import rawData from "@/data/survey.json";
+import airQualityData from "@/data/air-quality.json";
 
-const TimeSeriesChart = dynamic(() => import("@/components/TimeSeriesChart"), { ssr: false });
+import ChartSkeleton from "@/components/ChartSkeleton";
+
+const TimeSeriesChart = dynamic(() => import("@/components/TimeSeriesChart"), { ssr: false, loading: () => <ChartSkeleton /> });
+const StackedBarChart = dynamic(() => import("@/components/StackedBarChart"), { ssr: false, loading: () => <ChartSkeleton /> });
 
 type SurveyRow = {
   year: number;
@@ -32,16 +37,18 @@ const MUNICIPIOS = [
 
 const PARTIAL_DATA = new Set(["San Nicolás", "San Pedro"]);
 
-const ALL_DIMENSIONS = [
-  { label: "Seguridad",         enabled: true,  color: "#fc6656", icon: "M12 3l7 4v5c0 5-7 9-7 9S5 17 5 12V7l7-4z" },
-  { label: "Medio Ambiente",    enabled: false, color: "#29c19b", icon: "M12 21V12m0 0C12 7 8 4 4 5c0 5 3 9 8 9m0-9c0-5 4-8 8-7-1 5-4 9-8 9" },
-  { label: "Movilidad",         enabled: false, color: "#7e33c3", icon: "M5 17H3V7l3-4h10l3 4v10h-2m-9 0a2 2 0 104 0m-4 0a2 2 0 014 0M3 11h18" },
-  { label: "Economía",          enabled: false, color: "#ffba00", icon: "M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" },
-  { label: "Salud",             enabled: false, color: "#fb7e50", icon: "M12 21C12 21 4 13.5 4 8.5A4.5 4.5 0 0112 5a4.5 4.5 0 018 3.5C20 13.5 12 21 12 21z" },
-  { label: "Educación",         enabled: false, color: "#7e33c3", icon: "M12 3L2 8l10 5 10-5-10-5zM2 13l10 5 10-5M2 18l10 5 10-5" },
-  { label: "Desarrollo Urbano", enabled: false, color: "#ffba00", icon: "M3 21h18M9 21V9l3-6 3 6v12M3 21V11l6-4M21 21V11l-6-4" },
-  { label: "Gobierno",          enabled: false, color: "#fc6656", icon: "M3 21h18M3 10h18M5 10V6l7-3 7 3v4M9 21v-6h6v6" },
-] as const;
+import type { LucideIcon } from "lucide-react";
+
+const ALL_DIMENSIONS: { label: string; enabled: boolean; color: string; Icon: LucideIcon }[] = [
+  { label: "Seguridad",         enabled: true,  color: "#fc6656", Icon: ShieldCheck },
+  { label: "Medio Ambiente",    enabled: true,  color: "#29c19b", Icon: Leaf        },
+  { label: "Movilidad",         enabled: false, color: "#7e33c3", Icon: Bus         },
+  { label: "Economía",          enabled: false, color: "#ffba00", Icon: TrendingUp  },
+  { label: "Salud",             enabled: false, color: "#fb7e50", Icon: Heart       },
+  { label: "Educación",         enabled: false, color: "#7e33c3", Icon: BookOpen    },
+  { label: "Desarrollo Urbano", enabled: false, color: "#ffba00", Icon: Building2   },
+  { label: "Gobierno",          enabled: false, color: "#fc6656", Icon: Landmark    },
+];
 
 type DimensionLabel = "Seguridad" | "Medio Ambiente";
 
@@ -49,7 +56,7 @@ const INDICATORS = [
   { label: "Confianza en policía",          dimension: "Seguridad"      as DimensionLabel, color: "#fc6656", dataLabel: "Confianza en policía municipal", question: "¿Confía en la policía de su colonia?",                                     enabled: true  },
   { label: "Percepción de inseguridad",     dimension: "Seguridad"      as DimensionLabel, color: "#fc6656", dataLabel: "Percepción de inseguridad",    question: "¿Qué tan seguro(a) se siente en su municipio?",                            enabled: true  },
   { label: "Satisfacción con áreas verdes", dimension: "Medio Ambiente" as DimensionLabel, color: "#29c19b", dataLabel: "Satisfacción con áreas verdes",   question: "¿Los parques y jardines de su municipio están limpios y tienen buena imagen?", enabled: true  },
-  { label: "Calidad del aire",              dimension: "Medio Ambiente" as DimensionLabel, color: "#29c19b", dataLabel: "Calidad del aire percibida",       question: "¿Qué tan limpio o contaminado estuvo el aire en su municipio?",            enabled: true  },
+  { label: "Calidad del aire",              dimension: "Medio Ambiente" as DimensionLabel, color: "#29c19b", dataLabel: "Calidad del aire percibida",       question: "¿Qué tan limpio o contaminado estuvo el aire en su municipio?",                    enabled: true  },
 ] as const;
 
 
@@ -256,7 +263,7 @@ export default function Home() {
                 key={dim.label}
                 disabled={!isEnabled}
                 onClick={() => isEnabled && handleDimensionClick(dim.label as DimensionLabel)}
-                className="w-full text-left px-5 py-2.5 text-sm transition-all flex items-center gap-3"
+                className="w-full text-left px-5 py-2.5 text-sm transition-all flex items-center gap-3 group"
                 style={{
                   color: isActive ? dim.color : isEnabled ? "#161616" : "#bebebe",
                   cursor: isEnabled ? "pointer" : "not-allowed",
@@ -264,15 +271,23 @@ export default function Home() {
                   borderLeft: isActive ? `3px solid ${dim.color}` : "3px solid transparent",
                   fontWeight: isActive ? 600 : 400,
                 }}
+                onMouseEnter={(e) => { if (isEnabled && !isActive) (e.currentTarget as HTMLElement).style.backgroundColor = dim.color + "0a"; }}
+                onMouseLeave={(e) => { if (!isActive) (e.currentTarget as HTMLElement).style.backgroundColor = "transparent"; }}
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }}>
-                  <path d={(dim as { icon: string }).icon} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <dim.Icon size={17} className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }} />
                 {dim.label}
               </button>
             );
           })}
         </nav>
+
+        <div className="px-5 py-4" style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+          <p className="text-xs mb-1" style={{ color: "#bebebe" }}>Conoce más en</p>
+          <a href="https://comovamosnl.org" target="_blank" rel="noopener noreferrer"
+            className="text-xs font-medium hover:underline" style={{ color: "#7e33c3" }}>
+            comovamosnl.org
+          </a>
+        </div>
 
       </aside>
 
@@ -318,7 +333,7 @@ export default function Home() {
                     key={dim.label}
                     disabled={!isEnabled}
                     onClick={() => { if (isEnabled) { handleDimensionClick(dim.label as DimensionLabel); setDrawerOpen(false); } }}
-                    className="w-full text-left px-5 py-3 text-sm transition-all flex items-center"
+                    className="w-full text-left px-5 py-3 text-sm transition-all flex items-center gap-3"
                     style={{
                       color: isActive ? dim.color : isEnabled ? "#161616" : "#bebebe",
                       cursor: isEnabled ? "pointer" : "not-allowed",
@@ -327,9 +342,7 @@ export default function Home() {
                       fontWeight: isActive ? 600 : 400,
                     }}
                   >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }}>
-                  <path d={(dim as { icon: string }).icon} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                    <dim.Icon size={17} className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }} />
                 {dim.label}
                   </button>
                 );
@@ -379,11 +392,10 @@ export default function Home() {
               <div className="flex-1">
                 <p className="text-base font-semibold" style={{ color: "#161616" }}>{getQuestion(selected)}</p>
                 <p className="text-sm mt-0.5" style={{ color: "#9a9a9a" }}>
-                  {selected === "Percepción de inseguridad" && "% que se siente inseguro o muy inseguro"}
-                  {selected === "Confianza en policía" && "% que confía en la policía de su colonia"}
-                  {selected === "Satisfacción con áreas verdes" && "% que considera los parques limpios y con buena imagen"}
-                  {selected === "Calidad del aire" && "% que califica el aire como limpio o muy limpio"}
-                  {" · 2023–2025"}
+                  {selected === "Percepción de inseguridad" && "% que se siente inseguro o muy inseguro · "}
+                  {selected === "Confianza en policía" && "% que confía en la policía de su colonia · "}
+                  {selected === "Satisfacción con áreas verdes" && "% que considera los parques limpios y con buena imagen · "}
+                  2023–2025
                 </p>
               </div>
               <div className="w-full lg:w-1/2">
@@ -395,17 +407,29 @@ export default function Home() {
               <div className="flex items-center justify-center rounded-xl" style={{ height: 480, backgroundColor: "#fcefe4" }}>
                 <p className="text-sm" style={{ color: "#b2b2b2" }}>Selecciona al menos un municipio para ver la gráfica</p>
               </div>
+            ) : selected === "Calidad del aire" ? (
+              <StackedBarChart
+                data={airQualityData as { year: number; municipio: string; Contaminado: number; Neutral: number; Limpio: number }[]}
+                municipios={chartMunicipios}
+              />
             ) : (
               <TimeSeriesChart data={chartData} municipios={chartMunicipios} lineColor={chartMunicipios.length === 1 ? ind.color : undefined} />
             )}
 
-            <div className="mt-4 flex items-start justify-between gap-4">
-              <p className="text-xs" style={{ color: "#b2b2b2" }}>
-                Fuente: Encuesta Así Vamos, Cómo Vamos Nuevo León.
-              </p>
-              {chartMunicipios.some((m) => PARTIAL_DATA.has(m)) && (
-                <p className="text-xs text-right flex-shrink-0" style={{ color: "#b2b2b2" }}>
-                  * {chartMunicipios.filter((m) => PARTIAL_DATA.has(m)).join(" y ")} solo {chartMunicipios.filter((m) => PARTIAL_DATA.has(m)).length > 1 ? "cuentan" : "cuenta"} con datos de 2025.
+            <div className="mt-4 flex flex-col gap-1.5">
+              <div className="flex items-start justify-between gap-4">
+                <p className="text-xs" style={{ color: "#b2b2b2" }}>
+                  Fuente: Encuesta Así Vamos, Cómo Vamos Nuevo León.
+                </p>
+                {chartMunicipios.some((m) => PARTIAL_DATA.has(m)) && (
+                  <p className="text-xs text-right flex-shrink-0" style={{ color: "#b2b2b2" }}>
+                    * {chartMunicipios.filter((m) => PARTIAL_DATA.has(m)).join(" y ")} solo {chartMunicipios.filter((m) => PARTIAL_DATA.has(m)).length > 1 ? "cuentan" : "cuenta"} con datos de 2025.
+                  </p>
+                )}
+              </div>
+              {selected === "Calidad del aire" && (
+                <p className="text-xs" style={{ color: "#b2b2b2" }}>
+                  * En 2023 la escala de respuesta era diferente (Pésima→Excelente). Los datos fueron normalizados a tres categorías para permitir comparación entre años.
                 </p>
               )}
             </div>

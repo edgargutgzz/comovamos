@@ -14,14 +14,14 @@ import {
 const MUNICIPIO_COLORS: Record<string, string> = {
   AMM:             "#7e33c3",
   Monterrey:       "#fc6656",
-  "San Nicolás":   "#0ea5e9",
+  "San Nicolás":   "#ffba00",
   Guadalupe:       "#29c19b",
-  "San Pedro":     "#f59e0b",
-  Apodaca:         "#e879f9",
-  "Santa Catarina":"#84cc16",
-  García:          "#f97316",
-  Escobedo:        "#64748b",
-  Juárez:          "#ec4899",
+  "San Pedro":     "#fb7e50",
+  Apodaca:         "#fc6656",
+  "Santa Catarina":"#29c19b",
+  García:          "#ffba00",
+  Escobedo:        "#fb7e50",
+  Juárez:          "#7e33c3",
 };
 
 type DataPoint = Record<string, number>;

@@ -1,0 +1,184 @@
+[
+  {
+    "year": 2025,
+    "municipio": "Apodaca",
+    "Contaminado": 43,
+    "Neutral": 35,
+    "Limpio": 22
+  },
+  {
+    "year": 2025,
+    "municipio": "Escobedo",
+    "Contaminado": 41,
+    "Neutral": 40,
+    "Limpio": 19
+  },
+  {
+    "year": 2025,
+    "municipio": "García",
+    "Contaminado": 53,
+    "Neutral": 37,
+    "Limpio": 8
+  },
+  {
+    "year": 2025,
+    "municipio": "Guadalupe",
+    "Contaminado": 45,
+    "Neutral": 39,
+    "Limpio": 15
+  },
+  {
+    "year": 2025,
+    "municipio": "Juárez",
+    "Contaminado": 35,
+    "Neutral": 39,
+    "Limpio": 25
+  },
+  {
+    "year": 2025,
+    "municipio": "Monterrey",
+    "Contaminado": 53,
+    "Neutral": 40,
+    "Limpio": 7
+  },
+  {
+    "year": 2025,
+    "municipio": "San Nicolás",
+    "Contaminado": 41,
+    "Neutral": 41,
+    "Limpio": 17
+  },
+  {
+    "year": 2025,
+    "municipio": "San Pedro",
+    "Contaminado": 52,
+    "Neutral": 27,
+    "Limpio": 21
+  },
+  {
+    "year": 2025,
+    "municipio": "Santa Catarina",
+    "Contaminado": 62,
+    "Neutral": 31,
+    "Limpio": 7
+  },
+  {
+    "year": 2025,
+    "municipio": "AMM",
+    "Contaminado": 46,
+    "Neutral": 38,
+    "Limpio": 15
+  },
+  {
+    "year": 2024,
+    "municipio": "Apodaca",
+    "Contaminado": 55,
+    "Neutral": 32,
+    "Limpio": 12
+  },
+  {
+    "year": 2024,
+    "municipio": "Escobedo",
+    "Contaminado": 47,
+    "Neutral": 43,
+    "Limpio": 10
+  },
+  {
+    "year": 2024,
+    "municipio": "García",
+    "Contaminado": 64,
+    "Neutral": 27,
+    "Limpio": 8
+  },
+  {
+    "year": 2024,
+    "municipio": "Guadalupe",
+    "Contaminado": 50,
+    "Neutral": 35,
+    "Limpio": 13
+  },
+  {
+    "year": 2024,
+    "municipio": "Juárez",
+    "Contaminado": 77,
+    "Neutral": 18,
+    "Limpio": 3
+  },
+  {
+    "year": 2024,
+    "municipio": "Monterrey",
+    "Contaminado": 57,
+    "Neutral": 25,
+    "Limpio": 18
+  },
+  {
+    "year": 2024,
+    "municipio": "Santa Catarina",
+    "Contaminado": 67,
+    "Neutral": 28,
+    "Limpio": 5
+  },
+  {
+    "year": 2024,
+    "municipio": "AMM",
+    "Contaminado": 57,
+    "Neutral": 29,
+    "Limpio": 12
+  },
+  {
+    "year": 2023,
+    "municipio": "Apodaca",
+    "Contaminado": 17,
+    "Neutral": 41,
+    "Limpio": 42
+  },
+  {
+    "year": 2023,
+    "municipio": "Escobedo",
+    "Contaminado": 17,
+    "Neutral": 57,
+    "Limpio": 26
+  },
+  {
+    "year": 2023,
+    "municipio": "García",
+    "Contaminado": 24,
+    "Neutral": 46,
+    "Limpio": 30
+  },
+  {
+    "year": 2023,
+    "municipio": "Guadalupe",
+    "Contaminado": 19,
+    "Neutral": 37,
+    "Limpio": 44
+  },
+  {
+    "year": 2023,
+    "municipio": "Juárez",
+    "Contaminado": 30,
+    "Neutral": 49,
+    "Limpio": 21
+  },
+  {
+    "year": 2023,
+    "municipio": "Monterrey",
+    "Contaminado": 34,
+    "Neutral": 35,
+    "Limpio": 31
+  },
+  {
+    "year": 2023,
+    "municipio": "Santa Catarina",
+    "Contaminado": 25,
+    "Neutral": 43,
+    "Limpio": 31
+  },
+  {
+    "year": 2023,
+    "municipio": "AMM",
+    "Contaminado": 23,
+    "Neutral": 43,
+    "Limpio": 34
+  }
+]
