@@ -217,6 +217,7 @@ export default function Home() {
   const [selected, setSelected] = useState<IndicatorLabel>("Confianza en policía");
   const [municipios, setMunicipios] = useState<string[]>(["AMM"]);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [showHero, setShowHero] = useState(true);
 
   const ind = getIndicator(selected);
   const dataLabel = getDataLabel(selected);
@@ -233,15 +234,46 @@ export default function Home() {
 
   const currentIndicators = INDICATORS.filter((i) => i.dimension === dimension);
 
+  if (showHero) return (
+    <div className="min-h-screen flex flex-col items-center justify-center font-sans px-6" style={{ backgroundColor: "#fcefe4" }}>
+      <div className="max-w-lg w-full text-center">
+        <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-20 w-auto mx-auto mb-8" />
+        <h1 className="text-4xl font-bold tracking-tight mb-4" style={{ color: "#161616" }}>
+          Encuesta Así Vamos
+        </h1>
+        <p className="text-lg mb-3" style={{ color: "#9a9a9a" }}>
+          Explora cómo perciben los ciudadanos del AMM su ciudad: seguridad, medio ambiente y más.
+        </p>
+        <p className="text-sm mb-10" style={{ color: "#bebebe" }}>
+          9 municipios · 2023–2025
+        </p>
+        <button
+          onClick={() => setShowHero(false)}
+          className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-white transition-opacity hover:opacity-90 cursor-pointer"
+          style={{ backgroundColor: "#7e33c3" }}
+        >
+          Explorar datos
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        <p className="text-xs mt-12" style={{ color: "#bebebe" }}>
+          Fuente: Encuesta Así Vamos, Cómo Vamos Nuevo León · comovamosnl.org
+        </p>
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-h-screen flex flex-col lg:flex-row font-sans" style={{ backgroundColor: "#fcefe4", color: "#161616" }}>
+
 
       {/* Sidebar — desktop only */}
       <aside className="hidden lg:flex w-72 flex-shrink-0 bg-white flex-col" style={{ borderRight: "1px solid rgba(0,0,0,0.08)", minHeight: "100vh" }}>
 
         {/* Logo */}
         <div className="px-5 py-6" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
-          <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-12 w-auto" />
+          <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-12 w-auto cursor-pointer" onClick={() => setShowHero(true)} />
         </div>
 
         {/* Title */}
@@ -259,24 +291,24 @@ export default function Home() {
             const isActive = dim.label === dimension;
             const isEnabled = dim.enabled;
             return (
-              <button
-                key={dim.label}
-                disabled={!isEnabled}
-                onClick={() => isEnabled && handleDimensionClick(dim.label as DimensionLabel)}
-                className="w-full text-left px-5 py-2.5 text-sm transition-all flex items-center gap-3 group"
-                style={{
-                  color: isActive ? dim.color : isEnabled ? "#161616" : "#bebebe",
-                  cursor: isEnabled ? "pointer" : "not-allowed",
-                  backgroundColor: isActive ? dim.color + "12" : "transparent",
-                  borderLeft: isActive ? `3px solid ${dim.color}` : "3px solid transparent",
-                  fontWeight: isActive ? 600 : 400,
-                }}
-                onMouseEnter={(e) => { if (isEnabled && !isActive) (e.currentTarget as HTMLElement).style.backgroundColor = dim.color + "0a"; }}
-                onMouseLeave={(e) => { if (!isActive) (e.currentTarget as HTMLElement).style.backgroundColor = "transparent"; }}
-              >
-                <dim.Icon size={17} className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }} />
-                {dim.label}
-              </button>
+              <div key={dim.label}>
+                <button
+                  onClick={() => isEnabled && handleDimensionClick(dim.label as DimensionLabel)}
+                  className="w-full text-left px-5 py-2.5 text-sm transition-all flex items-center gap-3"
+                  style={{
+                    color: isActive ? dim.color : isEnabled ? "#161616" : "#bebebe",
+                    cursor: isEnabled ? "pointer" : "default",
+                    backgroundColor: isActive ? dim.color + "12" : "transparent",
+                    borderLeft: isActive ? `3px solid ${dim.color}` : "3px solid transparent",
+                    fontWeight: isActive ? 600 : 400,
+                  }}
+                  onMouseEnter={(e) => { if (isEnabled && !isActive) (e.currentTarget as HTMLElement).style.backgroundColor = dim.color + "0a"; }}
+                  onMouseLeave={(e) => { if (!isActive) (e.currentTarget as HTMLElement).style.backgroundColor = "transparent"; }}
+                >
+                  <dim.Icon size={17} className="flex-shrink-0" style={{ opacity: isEnabled ? 1 : 0.4 }} />
+                  {dim.label}
+                </button>
+              </div>
             );
           })}
         </nav>
@@ -294,7 +326,7 @@ export default function Home() {
       {/* Mobile header */}
       <header className="lg:hidden bg-white flex items-center justify-between px-4 py-3" style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
         <div className="flex items-center gap-3">
-          <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-10 w-auto" />
+          <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-10 w-auto cursor-pointer" onClick={() => setShowHero(true)} />
           <div>
             <p className="text-sm font-bold" style={{ color: "#161616" }}>Encuesta Así Vamos</p>
             <p className="text-xs" style={{ color: "#9a9a9a" }}>2023–2025</p>
@@ -331,7 +363,7 @@ export default function Home() {
                 return (
                   <button
                     key={dim.label}
-                    disabled={!isEnabled}
+    
                     onClick={() => { if (isEnabled) { handleDimensionClick(dim.label as DimensionLabel); setDrawerOpen(false); } }}
                     className="w-full text-left px-5 py-3 text-sm transition-all flex items-center gap-3"
                     style={{
