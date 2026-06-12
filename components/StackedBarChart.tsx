@@ -102,7 +102,7 @@ export default function StackedBarChart({ data, municipios }: Props) {
           tickFormatter={(v) => `${v}%`}
           width={42}
         />
-        <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(0,0,0,0.04)", radius: 4 }} />
+        <Tooltip content={<CustomTooltip />} cursor={false} />
         <Legend
           content={() => (
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 pt-4 text-xs">
