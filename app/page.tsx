@@ -246,7 +246,7 @@ export default function Home() {
           Explora cómo perciben los ciudadanos del AMM su ciudad: seguridad, medio ambiente y más.
         </p>
         <p className="text-sm mb-10" style={{ color: "#bebebe" }}>
-          9 municipios · 2023–2025
+          Datos de la Encuesta Así Vamos · 9 municipios del AMM · 2023–2025
         </p>
         <button
           onClick={() => setShowHero(false)}
