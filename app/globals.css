@@ -19,3 +19,21 @@ body {
   background-color: var(--cvnl-bg);
   color: var(--cvnl-text);
 }
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.drawer-slide {
+  animation: slideInLeft 0.28s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+.drawer-backdrop {
+  animation: fadeIn 0.28s ease forwards;
+}

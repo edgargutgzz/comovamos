@@ -303,9 +303,9 @@ export default function Home() {
       {drawerOpen && (
         <div className="lg:hidden fixed inset-0 z-50 flex">
           {/* Backdrop */}
-          <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.4)" }} onClick={() => setDrawerOpen(false)} />
+          <div className="absolute inset-0 drawer-backdrop" style={{ backgroundColor: "rgba(0,0,0,0.4)" }} onClick={() => setDrawerOpen(false)} />
           {/* Drawer */}
-          <div className="relative w-72 bg-white flex flex-col h-full" style={{ boxShadow: "4px 0 24px rgba(0,0,0,0.12)" }}>
+          <div className="relative w-72 bg-white flex flex-col h-full drawer-slide" style={{ boxShadow: "4px 0 24px rgba(0,0,0,0.12)" }}>
             {/* Header */}
             <div className="flex items-center justify-between px-5 py-5" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
               <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-10 w-auto" />
