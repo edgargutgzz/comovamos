@@ -307,22 +307,16 @@ export default function Home() {
           {/* Drawer */}
           <div className="relative w-72 bg-white flex flex-col h-full drawer-slide" style={{ boxShadow: "4px 0 24px rgba(0,0,0,0.12)" }}>
             {/* Header */}
-            <div className="flex items-center justify-between px-5 py-5" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
-              <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-10 w-auto" />
+            <div className="flex items-center justify-between px-5 py-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+              <p className="text-sm font-semibold" style={{ color: "#161616" }}>Dimensiones</p>
               <button onClick={() => setDrawerOpen(false)} className="cursor-pointer p-1" style={{ color: "#9a9a9a" }}>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
                 </svg>
               </button>
             </div>
-            {/* Title */}
-            <div className="px-5 py-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
-              <p className="text-sm font-bold" style={{ color: "#161616" }}>Encuesta Así Vamos</p>
-              <p className="text-xs mt-0.5" style={{ color: "#9a9a9a" }}>2023–2025</p>
-            </div>
             {/* Dimensions */}
             <nav className="flex-1 py-3">
-              <p className="px-5 pb-2 text-xs font-semibold uppercase tracking-widest" style={{ color: "#bebebe" }}>Dimensiones</p>
               {ALL_DIMENSIONS.map((dim) => {
                 const isActive = dim.label === dimension;
                 const isEnabled = dim.enabled;
