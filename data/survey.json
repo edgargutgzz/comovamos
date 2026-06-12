@@ -2,202 +2,42 @@
   {
     "year": 2023,
     "municipio": "Apodaca",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 42,
-    "label": "42%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Escobedo",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 26,
-    "label": "26%"
-  },
-  {
-    "year": 2023,
-    "municipio": "García",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 30,
-    "label": "30%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Guadalupe",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 43,
-    "label": "43%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Monterrey",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 31,
-    "label": "31%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Santa Catarina",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 32,
-    "label": "32%"
-  },
-  {
-    "year": 2023,
-    "municipio": "AMM",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
     "value": 34,
     "label": "34%"
   },
   {
     "year": 2023,
-    "municipio": "Apodaca",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 75,
-    "label": "75%"
-  },
-  {
-    "year": 2023,
     "municipio": "Escobedo",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 58,
-    "label": "58%"
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 43,
+    "label": "43%"
   },
   {
     "year": 2023,
     "municipio": "García",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 50,
+    "label": "50%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Guadalupe",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 31,
+    "label": "31%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
     "value": 48,
     "label": "48%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Guadalupe",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 50,
-    "label": "50%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Monterrey",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 45,
-    "label": "45%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Santa Catarina",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 59,
-    "label": "59%"
-  },
-  {
-    "year": 2023,
-    "municipio": "AMM",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 56,
-    "label": "56%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Apodaca",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 68,
-    "label": "68%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Escobedo",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 71,
-    "label": "71%"
-  },
-  {
-    "year": 2023,
-    "municipio": "García",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 60,
-    "label": "60%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Guadalupe",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 67,
-    "label": "67%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Monterrey",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 56,
-    "label": "56%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Santa Catarina",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 62,
-    "label": "62%"
-  },
-  {
-    "year": 2023,
-    "municipio": "AMM",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 65,
-    "label": "65%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Apodaca",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 34,
-    "label": "34%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Escobedo",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 43,
-    "label": "43%"
-  },
-  {
-    "year": 2023,
-    "municipio": "García",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 50,
-    "label": "50%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Guadalupe",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 31,
-    "label": "31%"
   },
   {
     "year": 2023,
@@ -257,6 +97,14 @@
   },
   {
     "year": 2023,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Confianza en policía municipal",
+    "value": 34,
+    "label": "34%"
+  },
+  {
+    "year": 2023,
     "municipio": "Monterrey",
     "dimension": "Seguridad",
     "indicator": "Confianza en policía municipal",
@@ -280,172 +128,132 @@
     "label": "47%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "Apodaca",
     "dimension": "Medio Ambiente",
     "indicator": "Calidad del aire percibida",
-    "value": 12,
-    "label": "12%"
+    "value": 42,
+    "label": "42%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "Escobedo",
     "dimension": "Medio Ambiente",
     "indicator": "Calidad del aire percibida",
-    "value": 10,
-    "label": "10%"
+    "value": 26,
+    "label": "26%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "García",
     "dimension": "Medio Ambiente",
     "indicator": "Calidad del aire percibida",
-    "value": 8,
-    "label": "8%"
+    "value": 30,
+    "label": "30%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "Guadalupe",
     "dimension": "Medio Ambiente",
     "indicator": "Calidad del aire percibida",
-    "value": 14,
-    "label": "14%"
+    "value": 43,
+    "label": "43%"
   },
   {
-    "year": 2024,
+    "year": 2023,
+    "municipio": "Juárez",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 21,
+    "label": "21%"
+  },
+  {
+    "year": 2023,
     "municipio": "Monterrey",
     "dimension": "Medio Ambiente",
     "indicator": "Calidad del aire percibida",
-    "value": 18,
-    "label": "18%"
+    "value": 31,
+    "label": "31%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "Santa Catarina",
     "dimension": "Medio Ambiente",
     "indicator": "Calidad del aire percibida",
-    "value": 5,
-    "label": "5%"
+    "value": 32,
+    "label": "32%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "AMM",
     "dimension": "Medio Ambiente",
     "indicator": "Calidad del aire percibida",
-    "value": 12,
-    "label": "12%"
+    "value": 34,
+    "label": "34%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "Apodaca",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
-    "value": 62,
-    "label": "62%"
+    "value": 75,
+    "label": "75%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "Escobedo",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
-    "value": 53,
-    "label": "53%"
+    "value": 58,
+    "label": "58%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "García",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
-    "value": 38,
-    "label": "38%"
+    "value": 48,
+    "label": "48%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "Guadalupe",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 50,
+    "label": "50%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Juárez",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 32,
+    "label": "32%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Monterrey",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
     "value": 45,
     "label": "45%"
   },
   {
-    "year": 2024,
-    "municipio": "Monterrey",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 50,
-    "label": "50%"
-  },
-  {
-    "year": 2024,
+    "year": 2023,
     "municipio": "Santa Catarina",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
-    "value": 52,
-    "label": "52%"
+    "value": 59,
+    "label": "59%"
   },
   {
-    "year": 2024,
+    "year": 2023,
     "municipio": "AMM",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
-    "value": 51,
-    "label": "51%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Apodaca",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 50,
-    "label": "50%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Escobedo",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 41,
-    "label": "41%"
-  },
-  {
-    "year": 2024,
-    "municipio": "García",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 48,
-    "label": "48%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Guadalupe",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 48,
-    "label": "48%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Monterrey",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 44,
-    "label": "44%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Santa Catarina",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 47,
-    "label": "47%"
-  },
-  {
-    "year": 2024,
-    "municipio": "AMM",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 46,
-    "label": "46%"
+    "value": 56,
+    "label": "56%"
   },
   {
     "year": 2024,
@@ -478,6 +286,14 @@
     "indicator": "Percepción de inseguridad",
     "value": 39,
     "label": "39%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 55,
+    "label": "55%"
   },
   {
     "year": 2024,
@@ -537,6 +353,14 @@
   },
   {
     "year": 2024,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Confianza en policía municipal",
+    "value": 28,
+    "label": "28%"
+  },
+  {
+    "year": 2024,
     "municipio": "Monterrey",
     "dimension": "Seguridad",
     "indicator": "Confianza en policía municipal",
@@ -560,220 +384,132 @@
     "label": "52%"
   },
   {
-    "year": 2025,
+    "year": 2024,
     "municipio": "Apodaca",
     "dimension": "Medio Ambiente",
     "indicator": "Calidad del aire percibida",
+    "value": 12,
+    "label": "12%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Escobedo",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 10,
+    "label": "10%"
+  },
+  {
+    "year": 2024,
+    "municipio": "García",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 8,
+    "label": "8%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Guadalupe",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 14,
+    "label": "14%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Juárez",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 3,
+    "label": "3%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Monterrey",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 18,
+    "label": "18%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Santa Catarina",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 5,
+    "label": "5%"
+  },
+  {
+    "year": 2024,
+    "municipio": "AMM",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 12,
+    "label": "12%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Apodaca",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 62,
+    "label": "62%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Escobedo",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 53,
+    "label": "53%"
+  },
+  {
+    "year": 2024,
+    "municipio": "García",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 38,
+    "label": "38%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Guadalupe",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 45,
+    "label": "45%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Juárez",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
     "value": 21,
     "label": "21%"
   },
   {
-    "year": 2025,
-    "municipio": "Escobedo",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 19,
-    "label": "19%"
-  },
-  {
-    "year": 2025,
-    "municipio": "García",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 9,
-    "label": "9%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Guadalupe",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 15,
-    "label": "15%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Monterrey",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 7,
-    "label": "7%"
-  },
-  {
-    "year": 2025,
-    "municipio": "San Nicolás",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 17,
-    "label": "17%"
-  },
-  {
-    "year": 2025,
-    "municipio": "San Pedro",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 21,
-    "label": "21%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Santa Catarina",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 6,
-    "label": "6%"
-  },
-  {
-    "year": 2025,
-    "municipio": "AMM",
-    "dimension": "Medio Ambiente",
-    "indicator": "Calidad del aire percibida",
-    "value": 15,
-    "label": "15%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Apodaca",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 87,
-    "label": "87%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Escobedo",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 57,
-    "label": "57%"
-  },
-  {
-    "year": 2025,
-    "municipio": "García",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 48,
-    "label": "48%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Guadalupe",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 64,
-    "label": "64%"
-  },
-  {
-    "year": 2025,
+    "year": 2024,
     "municipio": "Monterrey",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
-    "value": 61,
-    "label": "61%"
+    "value": 50,
+    "label": "50%"
   },
   {
-    "year": 2025,
-    "municipio": "San Nicolás",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 79,
-    "label": "79%"
-  },
-  {
-    "year": 2025,
-    "municipio": "San Pedro",
-    "dimension": "Medio Ambiente",
-    "indicator": "Satisfacción con áreas verdes",
-    "value": 93,
-    "label": "93%"
-  },
-  {
-    "year": 2025,
+    "year": 2024,
     "municipio": "Santa Catarina",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
-    "value": 54,
-    "label": "54%"
+    "value": 52,
+    "label": "52%"
   },
   {
-    "year": 2025,
+    "year": 2024,
     "municipio": "AMM",
     "dimension": "Medio Ambiente",
     "indicator": "Satisfacción con áreas verdes",
-    "value": 63,
-    "label": "63%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Apodaca",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 63,
-    "label": "63%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Escobedo",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 57,
-    "label": "57%"
-  },
-  {
-    "year": 2025,
-    "municipio": "García",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 40,
-    "label": "40%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Guadalupe",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 66,
-    "label": "66%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Monterrey",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 47,
-    "label": "47%"
-  },
-  {
-    "year": 2025,
-    "municipio": "San Nicolás",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 60,
-    "label": "60%"
-  },
-  {
-    "year": 2025,
-    "municipio": "San Pedro",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 81,
-    "label": "81%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Santa Catarina",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 61,
-    "label": "61%"
-  },
-  {
-    "year": 2025,
-    "municipio": "AMM",
-    "dimension": "Movilidad",
-    "indicator": "Satisfacción con transporte público",
-    "value": 56,
-    "label": "56%"
+    "value": 51,
+    "label": "51%"
   },
   {
     "year": 2025,
@@ -806,6 +542,14 @@
     "indicator": "Percepción de inseguridad",
     "value": 22,
     "label": "22%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 31,
+    "label": "31%"
   },
   {
     "year": 2025,
@@ -881,6 +625,14 @@
   },
   {
     "year": 2025,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Confianza en policía municipal",
+    "value": 49,
+    "label": "49%"
+  },
+  {
+    "year": 2025,
     "municipio": "Monterrey",
     "dimension": "Seguridad",
     "indicator": "Confianza en policía municipal",
@@ -918,5 +670,165 @@
     "indicator": "Confianza en policía municipal",
     "value": 58,
     "label": "58%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Apodaca",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 21,
+    "label": "21%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Escobedo",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 19,
+    "label": "19%"
+  },
+  {
+    "year": 2025,
+    "municipio": "García",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 9,
+    "label": "9%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Guadalupe",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 15,
+    "label": "15%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Juárez",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 26,
+    "label": "26%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Monterrey",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 7,
+    "label": "7%"
+  },
+  {
+    "year": 2025,
+    "municipio": "San Nicolás",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 17,
+    "label": "17%"
+  },
+  {
+    "year": 2025,
+    "municipio": "San Pedro",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 21,
+    "label": "21%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Santa Catarina",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 6,
+    "label": "6%"
+  },
+  {
+    "year": 2025,
+    "municipio": "AMM",
+    "dimension": "Medio Ambiente",
+    "indicator": "Calidad del aire percibida",
+    "value": 15,
+    "label": "15%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Apodaca",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 87,
+    "label": "87%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Escobedo",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 57,
+    "label": "57%"
+  },
+  {
+    "year": 2025,
+    "municipio": "García",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 48,
+    "label": "48%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Guadalupe",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 64,
+    "label": "64%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Juárez",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 32,
+    "label": "32%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Monterrey",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 61,
+    "label": "61%"
+  },
+  {
+    "year": 2025,
+    "municipio": "San Nicolás",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 79,
+    "label": "79%"
+  },
+  {
+    "year": 2025,
+    "municipio": "San Pedro",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 93,
+    "label": "93%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Santa Catarina",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 54,
+    "label": "54%"
+  },
+  {
+    "year": 2025,
+    "municipio": "AMM",
+    "dimension": "Medio Ambiente",
+    "indicator": "Satisfacción con áreas verdes",
+    "value": 63,
+    "label": "63%"
   }
 ]

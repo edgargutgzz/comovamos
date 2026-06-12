@@ -12,15 +12,16 @@ import {
 } from "recharts";
 
 const MUNICIPIO_COLORS: Record<string, string> = {
-  AMM: "#1d4ed8",
-  Monterrey: "#0891b2",
-  "San Nicolás": "#7c3aed",
-  Guadalupe: "#b45309",
-  "San Pedro": "#059669",
-  Apodaca: "#dc2626",
-  "Santa Catarina": "#d97706",
-  García: "#6b7280",
-  Escobedo: "#be185d",
+  AMM:             "#7e33c3",
+  Monterrey:       "#fc6656",
+  "San Nicolás":   "#0ea5e9",
+  Guadalupe:       "#29c19b",
+  "San Pedro":     "#f59e0b",
+  Apodaca:         "#e879f9",
+  "Santa Catarina":"#84cc16",
+  García:          "#f97316",
+  Escobedo:        "#64748b",
+  Juárez:          "#ec4899",
 };
 
 type DataPoint = Record<string, number>;
@@ -28,6 +29,11 @@ type DataPoint = Record<string, number>;
 type Props = {
   data: DataPoint[];
   municipios: string[];
+  lineColor?: string;
+};
+
+const MUN_LABELS: Record<string, string> = {
+  AMM: "Área Metropolitana (AMM)",
 };
 
 const CustomTooltip = ({
@@ -41,32 +47,35 @@ const CustomTooltip = ({
 }) => {
   if (!active || !payload?.length) return null;
   return (
-    <div className="bg-white border border-stone-200 rounded-lg px-4 py-3 shadow-lg text-sm">
-      <p className="font-semibold text-stone-700 mb-2">{label}</p>
+    <div className="bg-white rounded-xl px-4 py-3 text-sm" style={{ border: "1px solid rgba(0,0,0,0.1)", boxShadow: "0 4px 16px rgba(0,0,0,0.08)", minWidth: "200px" }}>
+      <p className="font-semibold mb-3" style={{ color: "#9a9a9a" }}>{label}</p>
       {payload.map((entry) => (
-        <p key={entry.name} style={{ color: entry.color }} className="flex items-center gap-2">
-          <span className="font-medium">{entry.name}</span>
-          <span className="ml-auto font-semibold">{entry.value}%</span>
-        </p>
+        <div key={entry.name} className="flex items-center justify-between gap-6 mb-1">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: entry.color }} />
+            <span style={{ color: "#161616" }}>{MUN_LABELS[entry.name] ?? entry.name}</span>
+          </div>
+          <span className="font-bold" style={{ color: entry.color }}>{entry.value}%</span>
+        </div>
       ))}
     </div>
   );
 };
 
-export default function TimeSeriesChart({ data, municipios }: Props) {
+export default function TimeSeriesChart({ data, municipios, lineColor }: Props) {
   return (
-    <ResponsiveContainer width="100%" height={380}>
-      <LineChart data={data} margin={{ top: 8, right: 24, left: 0, bottom: 0 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#e7e5e4" />
+    <ResponsiveContainer width="100%" height={480}>
+      <LineChart data={data} margin={{ top: 8, right: 24, left: 0, bottom: 16 }}>
+        <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
         <XAxis
           dataKey="year"
-          tick={{ fontSize: 12, fill: "#78716c" }}
+          tick={{ fontSize: 12, fill: "#9a9a9a", fontFamily: "var(--font-rubik, sans-serif)", dy: 10 }}
           tickLine={false}
-          axisLine={{ stroke: "#d6d3d1" }}
+          axisLine={{ stroke: "#e8e8e8" }}
         />
         <YAxis
           domain={[0, 100]}
-          tick={{ fontSize: 12, fill: "#78716c" }}
+          tick={{ fontSize: 12, fill: "#9a9a9a", fontFamily: "var(--font-rubik, sans-serif)" }}
           tickLine={false}
           axisLine={false}
           tickFormatter={(v) => `${v}%`}
@@ -75,7 +84,7 @@ export default function TimeSeriesChart({ data, municipios }: Props) {
         <Tooltip content={<CustomTooltip />} />
         {municipios.length > 1 && (
           <Legend
-            wrapperStyle={{ fontSize: 12, paddingTop: 16 }}
+            wrapperStyle={{ fontSize: 12, paddingTop: 16, fontFamily: "var(--font-rubik, sans-serif)" }}
             iconType="circle"
             iconSize={8}
           />
@@ -85,10 +94,10 @@ export default function TimeSeriesChart({ data, municipios }: Props) {
             key={mun}
             type="monotone"
             dataKey={mun}
-            stroke={MUNICIPIO_COLORS[mun] ?? "#1d4ed8"}
-            strokeWidth={municipios.length === 1 ? 2.5 : 2}
-            dot={{ r: municipios.length === 1 ? 4 : 3, strokeWidth: 0 }}
-            activeDot={{ r: 6, strokeWidth: 0 }}
+            stroke={lineColor ?? MUNICIPIO_COLORS[mun] ?? "#7e33c3"}
+            strokeWidth={2.5}
+            dot={{ r: 5, strokeWidth: 0, fill: lineColor ?? MUNICIPIO_COLORS[mun] ?? "#7e33c3" }}
+            activeDot={{ r: 7, strokeWidth: 0 }}
           />
         ))}
       </LineChart>
