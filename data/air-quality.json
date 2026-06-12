@@ -4,7 +4,7 @@
     "municipio": "Apodaca",
     "Contaminado": 43,
     "Neutral": 35,
-    "Limpio": 22
+    "Limpio": 21
   },
   {
     "year": 2025,
@@ -16,9 +16,9 @@
   {
     "year": 2025,
     "municipio": "García",
-    "Contaminado": 53,
+    "Contaminado": 54,
     "Neutral": 37,
-    "Limpio": 8
+    "Limpio": 9
   },
   {
     "year": 2025,
@@ -32,7 +32,7 @@
     "municipio": "Juárez",
     "Contaminado": 35,
     "Neutral": 39,
-    "Limpio": 25
+    "Limpio": 26
   },
   {
     "year": 2025,
@@ -46,7 +46,7 @@
     "municipio": "San Nicolás",
     "Contaminado": 41,
     "Neutral": 41,
-    "Limpio": 17
+    "Limpio": 18
   },
   {
     "year": 2025,
@@ -65,7 +65,7 @@
   {
     "year": 2025,
     "municipio": "AMM",
-    "Contaminado": 46,
+    "Contaminado": 47,
     "Neutral": 38,
     "Limpio": 15
   },
@@ -93,9 +93,9 @@
   {
     "year": 2024,
     "municipio": "Guadalupe",
-    "Contaminado": 50,
+    "Contaminado": 51,
     "Neutral": 35,
-    "Limpio": 13
+    "Limpio": 14
   },
   {
     "year": 2024,
@@ -121,14 +121,14 @@
   {
     "year": 2024,
     "municipio": "AMM",
-    "Contaminado": 57,
+    "Contaminado": 58,
     "Neutral": 29,
     "Limpio": 12
   },
   {
     "year": 2023,
     "municipio": "Apodaca",
-    "Contaminado": 17,
+    "Contaminado": 16,
     "Neutral": 41,
     "Limpio": 42
   },
@@ -151,7 +151,7 @@
     "municipio": "Guadalupe",
     "Contaminado": 19,
     "Neutral": 37,
-    "Limpio": 44
+    "Limpio": 43
   },
   {
     "year": 2023,
@@ -163,7 +163,7 @@
   {
     "year": 2023,
     "municipio": "Monterrey",
-    "Contaminado": 34,
+    "Contaminado": 33,
     "Neutral": 35,
     "Limpio": 31
   },
@@ -172,7 +172,7 @@
     "municipio": "Santa Catarina",
     "Contaminado": 25,
     "Neutral": 43,
-    "Limpio": 31
+    "Limpio": 32
   },
   {
     "year": 2023,

@@ -53,10 +53,10 @@ const ALL_DIMENSIONS: { label: string; enabled: boolean; color: string; Icon: Lu
 type DimensionLabel = "Seguridad" | "Medio Ambiente";
 
 const INDICATORS = [
-  { label: "Confianza en policía",          dimension: "Seguridad"      as DimensionLabel, color: "#fc6656", dataLabel: "Confianza en policía municipal", question: "¿Confía en la policía de su colonia?",                                     enabled: true  },
   { label: "Percepción de inseguridad",     dimension: "Seguridad"      as DimensionLabel, color: "#fc6656", dataLabel: "Percepción de inseguridad",    question: "¿Qué tan seguro(a) se siente en su municipio?",                            enabled: true  },
-  { label: "Satisfacción con áreas verdes", dimension: "Medio Ambiente" as DimensionLabel, color: "#29c19b", dataLabel: "Satisfacción con áreas verdes",   question: "¿Los parques y jardines de su municipio están limpios y tienen buena imagen?", enabled: true  },
+  { label: "Confianza en policía",          dimension: "Seguridad"      as DimensionLabel, color: "#fc6656", dataLabel: "Confianza en policía municipal", question: "¿Confía en la policía de su colonia?",                                     enabled: true  },
   { label: "Calidad del aire",              dimension: "Medio Ambiente" as DimensionLabel, color: "#29c19b", dataLabel: "Calidad del aire percibida",       question: "¿Qué tan limpio o contaminado estuvo el aire en su municipio?",                    enabled: true  },
+  { label: "Satisfacción con áreas verdes", dimension: "Medio Ambiente" as DimensionLabel, color: "#29c19b", dataLabel: "Satisfacción con áreas verdes",   question: "¿Los parques y jardines de su municipio están limpios y tienen buena imagen?", enabled: true  },
 ] as const;
 
 
@@ -391,7 +391,7 @@ export default function Home() {
         {/* Top bar: indicator tabs */}
         <div className="bg-white px-4 lg:px-8 pt-3 pb-0" style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
           {/* Indicator tabs */}
-          <div className="flex gap-1 mt-3">
+          <div className="flex gap-1 mt-3 overflow-x-auto">
             {currentIndicators.map((i) => {
               const active = selected === i.label;
               const enabled = (i as { enabled: boolean }).enabled;
@@ -450,12 +450,12 @@ export default function Home() {
             )}
 
             <div className="mt-4 flex flex-col gap-1.5">
-              <div className="flex items-start justify-between gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
                 <p className="text-xs" style={{ color: "#b2b2b2" }}>
                   Fuente: Encuesta Así Vamos, Cómo Vamos Nuevo León.
                 </p>
                 {chartMunicipios.some((m) => PARTIAL_DATA.has(m)) && (
-                  <p className="text-xs text-right flex-shrink-0" style={{ color: "#b2b2b2" }}>
+                  <p className="text-xs sm:text-right" style={{ color: "#b2b2b2" }}>
                     * {chartMunicipios.filter((m) => PARTIAL_DATA.has(m)).join(" y ")} solo {chartMunicipios.filter((m) => PARTIAL_DATA.has(m)).length > 1 ? "cuentan" : "cuenta"} con datos de 2025.
                   </p>
                 )}

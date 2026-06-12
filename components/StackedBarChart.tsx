@@ -16,7 +16,7 @@ type Props = {
 };
 
 const CATEGORY_COLORS = {
-  Contaminado: "#ffba00",
+  Contaminado: "#7e33c3",
   Neutral:     "#e8e8e8",
   Limpio:      "#29c19b",
 };
