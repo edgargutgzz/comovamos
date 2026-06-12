@@ -238,7 +238,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col items-center justify-center font-sans px-10 lg:px-6" style={{ backgroundColor: "#fcefe4" }}>
       <div className="max-w-lg w-full text-center">
         <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-20 w-auto mx-auto mb-8" />
-        <h1 className="text-4xl font-bold tracking-tight mb-4" style={{ color: "#161616" }}>
+        <h1 className="text-4xl font-bold tracking-tight mb-4 whitespace-nowrap" style={{ color: "#161616" }}>
           Encuesta Así Vamos
         </h1>
         <p className="text-lg mb-3" style={{ color: "#9a9a9a" }}>
