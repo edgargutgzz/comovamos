@@ -258,9 +258,7 @@ export default function Home() {
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
-        <p className="text-xs mt-12" style={{ color: "#bebebe" }}>
-          Fuente: Encuesta Así Vamos, Cómo Vamos Nuevo León · comovamosnl.org
-        </p>
+
       </div>
     </div>
   );
