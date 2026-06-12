@@ -235,7 +235,7 @@ export default function Home() {
   const currentIndicators = INDICATORS.filter((i) => i.dimension === dimension);
 
   if (showHero) return (
-    <div className="min-h-screen flex flex-col items-center justify-center font-sans px-6" style={{ backgroundColor: "#fcefe4" }}>
+    <div className="min-h-screen flex flex-col items-center justify-center font-sans px-10 lg:px-6" style={{ backgroundColor: "#fcefe4" }}>
       <div className="max-w-lg w-full text-center">
         <img src="/cvnl-logo.png" alt="Cómo Vamos Nuevo León" className="h-20 w-auto mx-auto mb-8" />
         <h1 className="text-4xl font-bold tracking-tight mb-4" style={{ color: "#161616" }}>
