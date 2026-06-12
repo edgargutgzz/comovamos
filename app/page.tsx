@@ -75,7 +75,7 @@ function getQuestion(label: IndicatorLabel): string {
 }
 
 const FIRST_BY_DIMENSION: Record<DimensionLabel, IndicatorLabel> = {
-  Seguridad:        "Confianza en policía",
+  Seguridad:        "Percepción de inseguridad",
   "Medio Ambiente": "Satisfacción con áreas verdes",
 };
 
@@ -214,8 +214,8 @@ function MunicipioSelect({ values, onChange }: { values: string[]; onChange: (v:
 
 export default function Home() {
   const [dimension, setDimension] = useState<DimensionLabel>("Seguridad");
-  const [selected, setSelected] = useState<IndicatorLabel>("Confianza en policía");
-  const [municipios, setMunicipios] = useState<string[]>(["AMM"]);
+  const [selected, setSelected] = useState<IndicatorLabel>("Percepción de inseguridad");
+  const [municipios, setMunicipios] = useState<string[]>(["AMM", "García", "San Pedro"]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showHero, setShowHero] = useState(true);
 
@@ -424,7 +424,7 @@ export default function Home() {
               <div className="flex-1">
                 <p className="text-base font-semibold" style={{ color: "#161616" }}>{getQuestion(selected)}</p>
                 <p className="text-sm mt-0.5" style={{ color: "#9a9a9a" }}>
-                  {selected === "Percepción de inseguridad" && "% que se siente inseguro o muy inseguro · "}
+                  {selected === "Percepción de inseguridad" && "% que se siente seguro o muy seguro · "}
                   {selected === "Confianza en policía" && "% que confía en la policía de su colonia · "}
                   {selected === "Satisfacción con áreas verdes" && "% que considera los parques limpios y con buena imagen · "}
                   2023–2025

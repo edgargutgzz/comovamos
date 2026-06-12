@@ -3,70 +3,6 @@
     "year": 2023,
     "municipio": "Apodaca",
     "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 34,
-    "label": "34%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Escobedo",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 43,
-    "label": "43%"
-  },
-  {
-    "year": 2023,
-    "municipio": "García",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 50,
-    "label": "50%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Guadalupe",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 31,
-    "label": "31%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Juárez",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 48,
-    "label": "48%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Monterrey",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 49,
-    "label": "49%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Santa Catarina",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 31,
-    "label": "31%"
-  },
-  {
-    "year": 2023,
-    "municipio": "AMM",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 40,
-    "label": "40%"
-  },
-  {
-    "year": 2023,
-    "municipio": "Apodaca",
-    "dimension": "Seguridad",
     "indicator": "Confianza en policía municipal",
     "value": 48,
     "label": "48%"
@@ -195,70 +131,6 @@
     "year": 2024,
     "municipio": "Apodaca",
     "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 31,
-    "label": "31%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Escobedo",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 36,
-    "label": "36%"
-  },
-  {
-    "year": 2024,
-    "municipio": "García",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 48,
-    "label": "48%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Guadalupe",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 39,
-    "label": "39%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Juárez",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 55,
-    "label": "55%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Monterrey",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 34,
-    "label": "34%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Santa Catarina",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 37,
-    "label": "37%"
-  },
-  {
-    "year": 2024,
-    "municipio": "AMM",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 36,
-    "label": "36%"
-  },
-  {
-    "year": 2024,
-    "municipio": "Apodaca",
-    "dimension": "Seguridad",
     "indicator": "Confianza en policía municipal",
     "value": 50,
     "label": "50%"
@@ -382,86 +254,6 @@
     "indicator": "Satisfacción con áreas verdes",
     "value": 51,
     "label": "51%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Apodaca",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 15,
-    "label": "15%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Escobedo",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 26,
-    "label": "26%"
-  },
-  {
-    "year": 2025,
-    "municipio": "García",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 44,
-    "label": "44%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Guadalupe",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 22,
-    "label": "22%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Juárez",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 31,
-    "label": "31%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Monterrey",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 26,
-    "label": "26%"
-  },
-  {
-    "year": 2025,
-    "municipio": "San Nicolás",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 11,
-    "label": "11%"
-  },
-  {
-    "year": 2025,
-    "municipio": "San Pedro",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 8,
-    "label": "8%"
-  },
-  {
-    "year": 2025,
-    "municipio": "Santa Catarina",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 24,
-    "label": "24%"
-  },
-  {
-    "year": 2025,
-    "municipio": "AMM",
-    "dimension": "Seguridad",
-    "indicator": "Percepción de inseguridad",
-    "value": 23,
-    "label": "23%"
   },
   {
     "year": 2025,
@@ -830,5 +622,213 @@
     "indicator": "Calidad del aire percibida",
     "value": 47,
     "label": "47%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Apodaca",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 66,
+    "label": "66%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Escobedo",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 57,
+    "label": "57%"
+  },
+  {
+    "year": 2023,
+    "municipio": "García",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 49,
+    "label": "49%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Guadalupe",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 69,
+    "label": "69%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 52,
+    "label": "52%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Monterrey",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 50,
+    "label": "50%"
+  },
+  {
+    "year": 2023,
+    "municipio": "Santa Catarina",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 69,
+    "label": "69%"
+  },
+  {
+    "year": 2023,
+    "municipio": "AMM",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 60,
+    "label": "60%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Apodaca",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 69,
+    "label": "69%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Escobedo",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 63,
+    "label": "63%"
+  },
+  {
+    "year": 2024,
+    "municipio": "García",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 52,
+    "label": "52%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Guadalupe",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 61,
+    "label": "61%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 45,
+    "label": "45%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Monterrey",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 66,
+    "label": "66%"
+  },
+  {
+    "year": 2024,
+    "municipio": "Santa Catarina",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 63,
+    "label": "63%"
+  },
+  {
+    "year": 2024,
+    "municipio": "AMM",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 64,
+    "label": "64%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Apodaca",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 84,
+    "label": "84%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Escobedo",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 74,
+    "label": "74%"
+  },
+  {
+    "year": 2025,
+    "municipio": "García",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 56,
+    "label": "56%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Guadalupe",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 78,
+    "label": "78%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Juárez",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 69,
+    "label": "69%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Monterrey",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 71,
+    "label": "71%"
+  },
+  {
+    "year": 2025,
+    "municipio": "San Nicolás",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 89,
+    "label": "89%"
+  },
+  {
+    "year": 2025,
+    "municipio": "San Pedro",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 92,
+    "label": "92%"
+  },
+  {
+    "year": 2025,
+    "municipio": "Santa Catarina",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 74,
+    "label": "74%"
+  },
+  {
+    "year": 2025,
+    "municipio": "AMM",
+    "dimension": "Seguridad",
+    "indicator": "Percepción de inseguridad",
+    "value": 75,
+    "label": "75%"
   }
 ]
