@@ -76,7 +76,7 @@ function getQuestion(label: IndicatorLabel): string {
 
 const FIRST_BY_DIMENSION: Record<DimensionLabel, IndicatorLabel> = {
   Seguridad:        "Percepción de inseguridad",
-  "Medio Ambiente": "Satisfacción con áreas verdes",
+  "Medio Ambiente": "Calidad del aire",
 };
 
 function buildChartData(
@@ -213,9 +213,9 @@ function MunicipioSelect({ values, onChange }: { values: string[]; onChange: (v:
 }
 
 export default function Home() {
-  const [dimension, setDimension] = useState<DimensionLabel>("Seguridad");
-  const [selected, setSelected] = useState<IndicatorLabel>("Percepción de inseguridad");
-  const [municipios, setMunicipios] = useState<string[]>(["AMM", "García", "Monterrey"]);
+  const [dimension, setDimension] = useState<DimensionLabel>("Medio Ambiente");
+  const [selected, setSelected] = useState<IndicatorLabel>("Calidad del aire");
+  const [municipios, setMunicipios] = useState<string[]>(["AMM"]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showHero, setShowHero] = useState(true);
 
